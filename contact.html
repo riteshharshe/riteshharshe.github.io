@@ -87,6 +87,18 @@
             background-color: #24292e;
             color: #f4f4f4;
         }
+        .contact-info {
+            font-family: "Courier New", Courier, monospace;
+            font-size: clamp(0.78rem, 3.2vw, 1rem);
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+            word-break: normal;
+        }
+        @media (max-width: 600px) {
+            .contact-info {
+                font-size: 0.82rem;
+            }
+        }
     </style>
 </head>
 
@@ -104,13 +116,14 @@
 </header>
 
 <main>
-<p class="intro" style="font-family: 'Courier New', Courier, monospace">
-    Ritesh Harshe<br>
-    SN Bose Corridor, Block 8, Desk 5, <br>
-    International Centre for Theoretical Sciences,<br>
-    Tata Institute of Fundamental Research,<br>
-    Shivakote, Hesaraghatta, Bangalore-560089, India<br>
-    ritesh.harshe@icts.res.in, rpharshe@gmail.com
+<p class="intro contact-info">
+  Ritesh Harshe<br>
+  SN Bose Corridor, Block 8, Desk 5,<br>
+  International Centre for Theoretical Sciences,<br>
+  Tata Institute of Fundamental Research,<br>
+  Shivakote, Hesaraghatta, Bangalore-560089, India<br>
+  <a href="mailto:ritesh.harshe@icts.res.in">ritesh.harshe@icts.res.in</a><br>
+  <a href="mailto:rpharshe@gmail.com">rpharshe@gmail.com</a>
 </p>
 </main>
 
