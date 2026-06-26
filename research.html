@@ -2,97 +2,205 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ritesh Harshe | Research </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritesh Harshe | Research</title>
+
     <link rel="icon" href="assets/chatgpt_bbh_merger.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/chatgpt_bbh_merger.ico" type="image/x-icon">
-    
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
+
+        *{
+            box-sizing:border-box;
         }
 
-        header {
-            background: #24292e;
-            padding: 30px 20px;
-            text-align: center;
-            color: white;
+        body{
+            margin:0;
+            font-family:Arial,sans-serif;
+            background:#f4f4f4;
+            color:#333;
+            line-height:1.7;
+
+            display:flex;
+            flex-direction:column;
+            min-height:100vh;
         }
 
-        header img {
-            width: 180px;
-            border-radius: 50%;
-            margin-top: 15px;
-            border: 3px solid #ffffff40;
+        header{
+            background:#24292e;
+            color:white;
+            padding:30px 20px;
+            text-align:center;
+            font-family:"Times New Roman", Times, serif;
         }
 
-        main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            text-align: center;
-            line-height: 1.6;
+        .navbar ul{
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            flex-wrap:wrap;
         }
 
-        a {
-            color: #0366d6;
-            text-decoration: none;
-            font-weight: 500;
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            font-size:1.05rem;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .navbar a:hover{
+            text-decoration:underline;
         }
 
-        .intro {
-            text-align: justify;
+        main{
+            max-width:900px;
+            margin:40px auto;
+            padding:0 20px;
+
+            flex:1;
         }
 
-        ul {
-            list-style-position: inside;
-            text-align: left;
-            padding-left: 0;
+        h1{
+            font-family:"Times New Roman", Times, serif;
+            font-weight:normal;
+            text-align:center;
+            margin-bottom:35px;
         }
 
-        .navbar {
-            text-align: center;
-            padding: 20px 0;
+        a{
+            color:#0366d6;
+            text-decoration:none;
+            font-weight:500;
         }
 
-        .navbar ul {
-            list-style: none;      /* removes bullets */
-            margin: 0;
-            padding: 0;
-            display: inline-flex;  /* makes it horizontal */
-            gap: 40px;             /* spacing between tabs */
+        a:hover{
+            text-decoration:underline;
         }
 
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            text-align: center;
+        /* ---------- Paper Cards ---------- */
+
+        .paper-card{
+            background:white;
+            border:1px solid #d9d9d9;
+            border-radius:10px;
+            padding:24px;
+            margin-bottom:28px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.06);
+            transition:0.2s ease;
         }
 
-        footer {
-            position: fixed;
-            bottom: 0;
-            text-align: center;
-            width: 100%;
-            background-color: #24292e;
-            color: #f4f4f4;
+        .paper-card:hover{
+            transform:translateY(-2px);
+            box-shadow:0 5px 14px rgba(0,0,0,0.10);
         }
+
+        .paper-header{
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:15px;
+            margin-bottom:12px;
+        }
+
+        .paper-title{
+            font-family:"Times New Roman", Times, serif;
+            font-size:1.35rem;
+            font-weight:bold;
+            line-height:1.3;
+        }
+
+        .paper-status{
+            background:#0366d6;
+            color:white;
+            padding:4px 10px;
+            border-radius:999px;
+            font-size:0.85rem;
+            white-space:nowrap;
+        }
+
+        .paper-authors{
+            color:#666;
+            margin-bottom:12px;
+        }
+
+        .paper-description{
+            text-align:justify;
+            margin-bottom:18px;
+        }
+
+        .paper-links{
+            display:flex;
+            flex-wrap:wrap;
+            gap:18px;
+        }
+
+        .paper-links a{
+            font-weight:600;
+        }
+
+        footer{
+            background:#24292e;
+            color:white;
+            text-align:center;
+            padding:15px;
+            font-family:"Times New Roman", Times, serif;
+        }
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width:768px){
+
+            header{
+                padding:20px 15px;
+            }
+
+            .navbar ul{
+                gap:15px 20px;
+            }
+
+            .navbar a{
+                font-size:1rem;
+            }
+
+            main{
+                margin:25px auto;
+                padding:0 16px;
+            }
+
+            .paper-card{
+                padding:18px;
+            }
+
+            .paper-header{
+                flex-direction:column;
+                gap:10px;
+            }
+
+            .paper-title{
+                font-size:1.15rem;
+            }
+
+            .paper-description{
+                text-align:left;
+            }
+
+            .paper-links{
+                gap:12px 18px;
+            }
+
+        }
+
     </style>
+
 </head>
 
 <body>
 
-<header style="font-family: 'Times New Roman', Times, serif">
+<header>
+
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -101,20 +209,65 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
 </header>
 
 <main>
-    <p class="intro" style="font-family: 'Times New Roman', Times, serif">
-        [<a href="papers/could_the_high_mass.pdf" target="_blank" rel="noopener">2604.14247</a>] We have shown that lensing cannot explain the high-mass black holes in the LIGO-Virgo-KAGRA observations, the universe must have such intrinsic high-mass black holes.
-    </p>
+
+    <div class="paper-card">
+
+        <div class="paper-header">
+
+            <div class="paper-title">
+                Could the high-mass black holes in gravitational-wave observations be explained by lensing?
+            </div>
+
+            <div class="paper-status">
+                Accepted
+            </div>
+
+        </div>
+
+        <div class="paper-authors">
+            Ritesh Harshe, R. Prasad, Parameswaran Ajith
+        </div>
+
+        <div class="paper-description">
+            We show that gravitational lensing cannot explain the high-mass
+            black holes observed by the LIGO–Virgo–KAGRA Collaboration.
+            The observed events therefore imply the existence of
+            intrinsically high-mass black holes in the Universe.
+        </div>
+
+        <div class="paper-links">
+            <a href="papers/could_the_high_mass.pdf" target="_blank" rel="noopener">
+                PDF
+            </a>
+
+            <a href="https://arxiv.org/abs/2604.14247" target="_blank" rel="noopener">
+                arXiv
+            </a>
+
+            <a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260414247H/abstract">
+                ADS
+            </a>
+
+            <a href="https://doi.org/10.3847/2041-8213/ae825d">
+                ApJL
+            </a>
+
+        </div>
+
+    </div>
+
 </main>
 
-<footer style="font-family: 'Times New Roman', Times, serif">
-  <p>&copy; Ritesh Harshe <span id="year"></span></p>
+<footer>
+    &copy; Ritesh Harshe <span id="year"></span>
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>

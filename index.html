@@ -2,113 +2,163 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritesh Harshe | Homepage</title>
+
     <link rel="icon" href="assets/chatgpt_bbh_merger.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/chatgpt_bbh_merger.ico" type="image/x-icon">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
+
+        *{
+            box-sizing:border-box;
         }
 
-        header {
-            background: #24292e;
-            padding: 30px 20px;
-            text-align: center;
-            color: white;
+        body{
+            margin:0;
+            font-family:Arial,sans-serif;
+            background:#f4f4f4;
+            color:#333;
+            line-height:1.7;
+
+            display:flex;
+            flex-direction:column;
+            min-height:100vh;
         }
 
-        header img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #ffffff40;
+        header{
+            background:#24292e;
+            color:white;
+            padding:30px 20px;
+            text-align:center;
+            font-family:"Times New Roman",Times,serif;
         }
 
-        main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            text-align: center;
-            line-height: 1.6;
+        header img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            border:3px solid rgba(255,255,255,0.25);
+            margin-top:20px;
         }
 
-        a {
-            color: #0366d6;
-            text-decoration: none;
-            font-weight: 600;
+        .navbar ul{
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            flex-wrap:wrap;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            font-size:1.05rem;
+            font-weight:500;
         }
 
-        .intro {
-            text-align: justify;
+        .navbar a:hover{
+            text-decoration:underline;
         }
 
-        ul {
-            list-style-position: inside;
-            text-align: left;
-            padding-left: 0;
+        main{
+            max-width:900px;
+            margin:40px auto;
+            padding:0 20px;
+
+            flex:1;
         }
 
-        .navbar {
-            text-align: center;
-            padding: 20px 0;
+        .intro{
+            text-align:justify;
+            font-family:"Times New Roman",Times,serif;
+            font-size:1.1rem;
         }
 
-        .navbar ul {
-            list-style: none;      /* removes bullets */
-            margin: 0;
-            padding: 0;
-            display: inline-flex;  /* makes it horizontal */
-            gap: 40px;             /* spacing between tabs */
+        a{
+            color:#0366d6;
+            text-decoration:none;
+            font-weight:600;
         }
 
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            text-align: center;
+        a:hover{
+            text-decoration:underline;
         }
 
-        .ext_links {
-            text-align: center;
-            padding:20px 0;
+        .ext_links{
+            text-align:center;
+            font-family:"Times New Roman",Times,serif;
         }
 
-        .ext_links ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;          /* allow wrapping */
-            justify-content: center;  /* keep it centered */
-            gap: 20px 40px;           /* row gap + column gap */
+        .ext_links ul{
+            list-style:none;
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:18px 35px;
+            margin-top:30px;
+            padding:0;
         }
-        
-        footer {
-            position: fixed;
-            bottom: 0;
-            text-align: center;
-            width: 100%;
-            background-color: #24292e;
-            color: #f4f4f4;
+
+        footer{
+            background:#24292e;
+            color:white;
+            text-align:center;
+            padding:15px;
+            font-family:"Times New Roman", Times, serif;
         }
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width:768px){
+
+            header{
+                padding:20px 15px;
+            }
+
+            header img{
+                width:120px;
+                height:120px;
+                margin-top:18px;
+            }
+
+            .navbar ul{
+                gap:15px 20px;
+            }
+
+            .navbar a{
+                font-size:1rem;
+                font-weight: 500
+            }
+
+            main{
+                margin:25px auto;
+                padding:0 16px;
+            }
+
+            .intro{
+                text-align:left;
+                font-size:1rem;
+            }
+
+            .ext_links ul{
+                gap:12px 18px;
+            }
+
+        }
+
     </style>
+
 </head>
 
 <body>
 
-<header style="font-family: 'Times New Roman', Times, serif">
+<header>
+
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -117,30 +167,44 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <img src="assets/me.JPG" class="top-right-photo">
+
+    <img src="assets/me.JPG" alt="Ritesh Harshe">
+
 </header>
 
 <main>
-    <div class="ext_links" style="font-family: 'Times New Roman', Times, serif">
-        <p class="intro" style="font-family: 'Times New Roman', Times, serif">Hi! My name is Ritesh Harshe. I am a PhD scholar at the International Centre for Theoretical Sciences, Tata Institute of Fundamental Research (<a href="https://www.icts.res.in" target="_blank" rel="noopener">ICTS-TIFR</a>), Bangalore. I am working in the gravitational-wave (GW) data analysis. I am involved in the search of lensing in the GW observations, and the development of deep learning methods for early warning of GW signals for follow-up of electromagnetic transients. I am happy to also work in other areas of GW data analysis.</p>
+
+    <div class="ext_links">
+
+        <p class="intro">
+            Hi! My name is Ritesh Harshe. I am a PhD scholar at the
+            International Centre for Theoretical Sciences, Tata Institute of Fundamental Research
+            (<a href="https://www.icts.res.in" target="_blank" rel="noopener">ICTS-TIFR</a>),
+            Bangalore. I work in gravitational-wave data analysis. My current
+            research focuses on the various effects of gravitational-wave lensing in 
+            the gravitational-wave observations. I have contributed in the development of deep neural
+            networks for the early-warning of binary neutron star mergers. I am
+            also interested in the stochastic gravitational-wave background data analysis and applications thereof.
+        </p>
+
         <ul>
-            <li><a href="https://www.icts.res.in/research/astrorel" target="_blank" rel="noopener">Astrophysical Relativity</a></li>
-            <li><a href="https://github.com/harsheritesh" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://scholar.google.com/citations?user=kYI9Ez8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
-            <li><a href="https://inspirehep.net/authors/3147729" target="_blank" rel="noopener">Inspire HEP</a></li>
+            <li><a href="https://www.icts.res.in/research/astrorel" target="_blank" rel="noopener">AstroRel@ICTS</a></li>
+            <li><a href="https://inspirehep.net/authors/3147729" target="_blank" rel="noopener">iNSPIRE</a></li>
+            <li><a href="https://scholar.google.com/citations?user=kYI9Ez8AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a></li>
             <li><a href="https://www.linkedin.com/in/ritesh-harshe/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
+
     </div>
+
 </main>
 
-<footer style="font-family: 'Times New Roman', Times, serif">
-  <p>&copy; Ritesh Harshe <span id="year"></span></p>
+<footer>
+    &copy; Ritesh Harshe <span id="year"></span>
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
-
 </html>
