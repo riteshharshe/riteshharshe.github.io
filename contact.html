@@ -50,6 +50,14 @@
             text-decoration:none;
             font-size:1.05rem;
             font-weight:500;
+            padding:8px 12px;
+            display:block;
+            border-radius:4px;
+            transition:background-color 0.2s ease;
+        }
+
+        .navbar a:active{
+            background-color:rgba(255,255,255,0.1);
         }
 
         .navbar a:hover{
@@ -91,11 +99,15 @@
         }
 
         .contact-info{
-            font-family:"Courier New", Courier, monospace;
+            font-family: "Geist", sans-serif;
             font-size:clamp(0.9rem, 2vw, 1rem);
             line-height:1.7;
             overflow-wrap:anywhere;
             text-align:left;
+        }
+
+        .contact-info a{
+            font-weight:700;
         }
 
         footer{
@@ -121,11 +133,12 @@
             }
 
             .navbar ul{
-                gap:15px 20px;
+                gap:8px 12px;
             }
 
             .navbar a{
-                font-size:1rem;
+                font-size:0.95rem;
+                padding:10px 14px;
             }
 
             main{
@@ -136,6 +149,38 @@
             .contact-info{
                 font-size:0.95rem;
                 line-height:1.6;
+            }
+
+        }
+
+        /* Small phones (< 480px) */
+        @media (max-width:480px){
+
+            header{
+                padding:15px 12px;
+            }
+
+            .navbar ul{
+                gap:6px 10px;
+                flex-direction:column;
+                row-gap:8px;
+            }
+
+            .navbar a{
+                font-size:0.9rem;
+                padding:12px 16px;
+                text-align:center;
+                width:100%;
+            }
+
+            main{
+                margin:20px auto;
+                padding:0 12px;
+            }
+
+            .contact-info{
+                font-size:0.9rem;
+                line-height:1.5;
             }
 
         }
